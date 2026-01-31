@@ -1,14 +1,49 @@
 {
   "project": {
     "name": "Automated Content Agents",
-    "version": "1.0.0",
-    "created": "2026-01-31"
+    "version": "1.2.0",
+    "created": "2026-01-31",
+    "updated": "2026-01-31"
   },
   "agents": {
     "youtube": {
       "enabled": true,
-      "path": "./youtube"
+      "path": "./youtube",
+      "master_prompt": "./youtube/MASTER-PROMPT.md"
+    },
+    "tiktok": {
+      "enabled": true,
+      "path": "./tiktok",
+      "master_prompt": "./tiktok/MASTER-PROMPT.md"
     }
+  },
+  "shared": {
+    "scripts_path": "./shared/scripts",
+    "prompts_path": "./shared/prompts"
+  },
+  "apis": {
+    "pexels": {
+      "enabled": true,
+      "config_file": "./config/credentials.env",
+      "rate_limit_hour": 200,
+      "rate_limit_month": 20000
+    },
+    "edge_tts": {
+      "enabled": true,
+      "default_voice": "es-ES-AlvaroNeural",
+      "rate_limit": null
+    }
+  },
+  "video": {
+    "default_style": "stock_video",
+    "fallback_style": "space",
+    "resolution": {
+      "shorts": "1080x1920",
+      "landscape": "1920x1080",
+      "square": "1080x1080"
+    },
+    "subtitle_style": "default",
+    "enable_ken_burns": true
   },
   "settings": {
     "log_level": "info",

@@ -9,6 +9,7 @@
 ```
 shared/scripts/
 ├── README.md                  # Esta documentación
+├── tiktok_producer.py         # Pipeline completo TikTok
 ├── video/                     # Scripts de generación de video
 │   ├── video_generator.py     # Generador principal de videos
 │   ├── pexels_client.py       # Cliente API de Pexels
@@ -59,6 +60,68 @@ result = generator.generate_short(
 | `animated`     | Gradientes y partículas     | Solo FFmpeg    |
 | `space`        | Estrellas y nebulosas       | Solo FFmpeg    |
 | `auto`         | Selección automática        | -              |
+
+---
+
+### tiktok_producer.py
+
+**Propósito**: Pipeline completo de producción de videos TikTok. Integra TTS, stock videos, composición y subtítulos en un solo script.
+
+**Características**:
+
+- Generación automática de audio TTS (Edge-TTS)
+- Descarga inteligente de videos stock (Pexels)
+- Composición de video 9:16 (1080x1920)
+- Subtítulos ASS con estilo viral (palabras clave resaltadas)
+- Limpieza automática de temporales
+
+**Uso como módulo**:
+
+```python
+from shared.scripts.tiktok_producer import TikTokProducer
+
+producer = TikTokProducer(
+    output_dir="/path/to/tiktok/assets",
+    config={
+        "voice": "es-ES-AlvaroNeural",
+        "voice_rate": "+5%",
+        "resolution": (1080, 1920),
+        "fps": 30
+    }
+)
+
+result = producer.produce(
+    script_text="Tu guion aquí...",
+    video_id="idea-001",
+    keywords=["mirror", "brain", "psychology"]
+)
+```
+
+**Uso CLI**:
+
+```bash
+python tiktok_producer.py \
+    --script "Texto del guion..." \
+    --id "video-001" \
+    --output "/tiktok/assets" \
+    --keywords mirror brain psychology
+```
+
+**Resultado**:
+
+```json
+{
+  "video_id": "idea-001",
+  "success": true,
+  "duration": 30.14,
+  "size_mb": 16.2,
+  "files": {
+    "audio": "audio/narration-idea-001.mp3",
+    "video": "video/final/idea-001-final.mp4",
+    "subtitles_ass": "video/subtitles-idea-001.ass"
+  }
+}
+```
 
 ---
 

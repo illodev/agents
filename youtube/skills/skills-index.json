@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "updated": "2026-01-31",
+  "skills": [
+    {
+      "name": "investigar-nicho",
+      "category": "research",
+      "file": "research/investigar-nicho.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Investiga y selecciona el nicho más rentable"
+    },
+    {
+      "name": "crear-cuenta-youtube",
+      "category": "platform",
+      "file": "platform/crear-cuenta-youtube.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Crea cuenta Google/YouTube automáticamente"
+    },
+    {
+      "name": "gestionar-credenciales",
+      "category": "platform",
+      "file": "platform/gestionar-credenciales.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Gestiona credenciales y sesiones de forma segura"
+    },
+    {
+      "name": "generar-ideas-virales",
+      "category": "content",
+      "file": "content/generar-ideas-virales.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Genera ideas con potencial viral"
+    },
+    {
+      "name": "crear-guion-short",
+      "category": "content",
+      "file": "content/crear-guion-short.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Crea guiones optimizados para Shorts"
+    },
+    {
+      "name": "subir-video-youtube",
+      "category": "platform",
+      "file": "platform/subir-video-youtube.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Sube videos a YouTube via Playwright"
+    },
+    {
+      "name": "manejar-errores",
+      "category": "automation",
+      "file": "automation/manejar-errores.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Sistema de manejo y recuperación de errores"
+    }
+  ]
+}

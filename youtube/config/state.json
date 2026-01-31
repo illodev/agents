@@ -1,0 +1,14 @@
+{
+  "current_phase": null,
+  "last_run": null,
+  "pending_tasks": [],
+  "in_progress": null,
+  "daily_stats": {
+    "ideas_generated": 0,
+    "scripts_created": 0,
+    "videos_produced": 0,
+    "videos_published": 0
+  },
+  "errors_today": 0,
+  "health": "idle"
+}

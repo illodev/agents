@@ -1,0 +1,40 @@
+{
+  "channel": {
+    "niche": "DEFINIR",
+    "sub_niche": null,
+    "language": "es",
+    "style": "educativo",
+    "target_audience": "DEFINIR",
+    "content_pillars": []
+  },
+  "content": {
+    "format": "shorts",
+    "daily_videos": 1,
+    "max_duration_shorts": 60,
+    "max_duration_largo": 600
+  },
+  "voice": {
+    "provider": "edge-tts",
+    "voice_id": "es-ES-AlvaroNeural",
+    "speed": 1.0
+  },
+  "scheduling": {
+    "enabled": true,
+    "best_hours": [9, 12, 18, 21],
+    "timezone": "Europe/Madrid"
+  },
+  "automation": {
+    "auto_publish": false,
+    "require_review": true,
+    "max_retries": 3,
+    "auto_create_account": true,
+    "auto_research_niche": true
+  },
+  "setup_status": {
+    "credentials_configured": false,
+    "account_created": false,
+    "niche_researched": false,
+    "channel_configured": false,
+    "ready_to_produce": false
+  }
+}

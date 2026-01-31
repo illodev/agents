@@ -1,0 +1,36 @@
+# Credenciales y secretos
+config/credentials.env
+*.env
+!*.env.example
+
+# Assets generados (muy pesados)
+*/assets/audio/*
+*/assets/video/*
+*/assets/thumbnails/*
+!*/assets/**/.gitkeep
+
+# Logs
+*/logs/*.log
+*/logs/*.json
+!*/logs/.gitkeep
+
+# Playwright
+playwright/.auth/
+playwright-report/
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/

@@ -1,0 +1,24 @@
+# Logs Diarios
+
+Registro de todas las acciones del agente por día.
+
+## Nomenclatura
+
+`{YYYY-MM-DD}.log`
+
+## Formato
+
+```
+[TIMESTAMP] [LEVEL] [COMPONENT] Message
+```
+
+## Ejemplo
+
+```
+[2026-01-31 10:00:00] [INFO] [pipeline] Starting daily cycle
+[2026-01-31 10:00:05] [INFO] [ideas] Generated 10 ideas
+[2026-01-31 10:00:10] [INFO] [ideas] Selected 3 for production
+[2026-01-31 10:05:00] [INFO] [script] Created script for idea-001
+[2026-01-31 10:10:00] [WARNING] [tts] API slow, retrying...
+[2026-01-31 10:10:30] [INFO] [tts] Audio generated for idea-001
+```

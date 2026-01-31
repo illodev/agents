@@ -1,0 +1,15 @@
+# Assets - Thumbnails
+
+Miniaturas generadas para los videos.
+
+## Nomenclatura
+
+`thumb-{idea_id}.png`
+
+## Especificaciones
+
+- Formato: PNG o JPG
+- Resolución: 1280x720
+- Tamaño máximo: 2MB
+- Colores vibrantes
+- Texto grande y legible

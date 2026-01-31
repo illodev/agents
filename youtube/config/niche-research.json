@@ -1,0 +1,16 @@
+{
+  "research_date": null,
+  "status": "pending",
+  "niches_evaluated": [],
+  "final_selection": {
+    "niche": null,
+    "sub_niche": null,
+    "angle": null,
+    "target_audience": null,
+    "content_pillars": [],
+    "cpm_estimate": null,
+    "competition_level": null
+  },
+  "reasoning": null,
+  "next_review": null
+}

@@ -1,0 +1,20 @@
+# Assets - Audio
+
+Este directorio almacena los archivos de audio generados (voz en off).
+
+## Nomenclatura
+
+`audio-{idea_id}.mp3`
+
+## Especificaciones
+
+- Formato: MP3
+- Bitrate: 320kbps
+- Sample rate: 44100 Hz
+- Canales: Mono
+- Volumen: Normalizado a -14 LUFS
+
+## Notas
+
+Los archivos de audio son generados pero **no se suben a git** por su tamaño.
+Ver `.gitignore` en la raíz del proyecto.

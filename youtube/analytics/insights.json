@@ -1,0 +1,22 @@
+{
+  "patterns": {
+    "hooks": {
+      "best_performing": [],
+      "avoid": []
+    },
+    "titles": {
+      "best_structures": [],
+      "keywords_that_work": []
+    },
+    "topics": {
+      "high_retention": [],
+      "low_retention": []
+    },
+    "timing": {
+      "best_hours": [],
+      "best_days": []
+    }
+  },
+  "learnings": [],
+  "last_analysis": null
+}

@@ -1,0 +1,25 @@
+# Logs de Errores
+
+Registro detallado de errores para debugging.
+
+## Nomenclatura
+
+`error-{YYYY-MM-DD}.json`
+
+## Formato
+
+```json
+{
+  "errors": [
+    {
+      "timestamp": "2026-01-31T10:30:00Z",
+      "level": "ERROR",
+      "component": "component-name",
+      "message": "Error description",
+      "details": {},
+      "action_taken": "What was done",
+      "resolved": true
+    }
+  ]
+}
+```

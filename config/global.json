@@ -1,0 +1,24 @@
+{
+  "project": {
+    "name": "Automated Content Agents",
+    "version": "1.0.0",
+    "created": "2026-01-31"
+  },
+  "agents": {
+    "youtube": {
+      "enabled": true,
+      "path": "./youtube"
+    }
+  },
+  "settings": {
+    "log_level": "info",
+    "auto_skill_generation": true,
+    "max_retries": 3,
+    "retry_delay_seconds": 30
+  },
+  "playwright": {
+    "headless": false,
+    "slow_mo": 100,
+    "timeout": 60000
+  }
+}

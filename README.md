@@ -42,7 +42,7 @@ automated-content/
 | Agente      | Estado       | Descripción                      |
 | ----------- | ------------ | -------------------------------- |
 | **YouTube** | 🟢 Activo    | Creación y publicación de videos |
-| TikTok      | 🔴 Pendiente | Próximamente                     |
+| **TikTok**  | 🟢 Activo    | Contenido viral para TikTok      |
 | Blog        | 🔴 Pendiente | Próximamente                     |
 
 ## 🆕 APIs Integradas

@@ -1,0 +1,101 @@
+{
+  "version": "1.0",
+  "updated": "2026-01-31",
+  "skills": [
+    {
+      "name": "investigar-nicho-tiktok",
+      "category": "research",
+      "file": "research/investigar-nicho-tiktok.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Investiga nichos rentables específicos para TikTok"
+    },
+    {
+      "name": "investigar-trends",
+      "category": "research",
+      "file": "research/investigar-trends.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Investiga sonidos, hashtags y formatos trending"
+    },
+    {
+      "name": "crear-cuenta-tiktok",
+      "category": "platform",
+      "file": "platform/crear-cuenta-tiktok.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Crea cuenta TikTok automáticamente"
+    },
+    {
+      "name": "gestionar-credenciales",
+      "category": "platform",
+      "file": "platform/gestionar-credenciales.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Gestiona credenciales y sesiones de forma segura"
+    },
+    {
+      "name": "generar-ideas-tiktok",
+      "category": "content",
+      "file": "content/generar-ideas-tiktok.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Genera ideas virales optimizadas para TikTok"
+    },
+    {
+      "name": "crear-guion-tiktok",
+      "category": "content",
+      "file": "content/crear-guion-tiktok.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Crea guiones ultra-optimizados para TikTok"
+    },
+    {
+      "name": "generar-video-tiktok",
+      "category": "media",
+      "file": "media/generar-video-tiktok.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Genera videos con estilo TikTok usando scripts compartidos"
+    },
+    {
+      "name": "generar-audio-tts",
+      "category": "media",
+      "file": "media/generar-audio-tts.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Genera narración con Edge-TTS optimizada para TikTok"
+    },
+    {
+      "name": "subir-video-tiktok",
+      "category": "platform",
+      "file": "platform/subir-video-tiktok.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Sube videos a TikTok via Playwright"
+    },
+    {
+      "name": "manejar-errores",
+      "category": "automation",
+      "file": "automation/manejar-errores.md",
+      "auto_generated": false,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Sistema de manejo y recuperación de errores"
+    }
+  ],
+  "shared_scripts": {
+    "video": "/shared/scripts/video/",
+    "audio": "/shared/scripts/audio/",
+    "utils": "/shared/scripts/utils/"
+  }
+}

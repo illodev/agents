@@ -1,0 +1,48 @@
+{
+  "account": {
+    "username": "DEFINIR",
+    "niche": "DEFINIR",
+    "language": "es",
+    "style": "DEFINIR",
+    "target_audience": "DEFINIR",
+    "region": "ES"
+  },
+  "content": {
+    "format": "short",
+    "daily_videos": 3,
+    "min_duration": 15,
+    "max_duration": 60,
+    "optimal_duration": 30
+  },
+  "voice": {
+    "provider": "edge-tts",
+    "voice_id": "es-ES-AlvaroNeural",
+    "speed": "+5%",
+    "pitch": "+0Hz"
+  },
+  "video": {
+    "style": "auto",
+    "resolution": "1080x1920",
+    "fps": 30,
+    "subtitle_style": "bold_center"
+  },
+  "tiktok_specific": {
+    "use_trending_sounds": true,
+    "add_captions": true,
+    "caption_style": "animated",
+    "hook_duration": 1.0,
+    "cta_style": "follow"
+  },
+  "scheduling": {
+    "enabled": true,
+    "best_hours": [7, 12, 19, 22],
+    "timezone": "Europe/Madrid",
+    "posts_per_day": 3,
+    "min_hours_between_posts": 4
+  },
+  "automation": {
+    "auto_publish": false,
+    "require_review": true,
+    "max_retries": 3
+  }
+}

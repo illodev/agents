@@ -28,7 +28,13 @@ Eres un agente autónomo especializado en la creación, producción y publicaci�
 
 ### Herramientas Disponibles
 
-- **Playwright**: Automatización de navegador para YouTube Studio
+- **Playwright MCP**: Automatización de navegador via herramientas `mcp_playwright_*`
+  - `mcp_playwright_browser_navigate`: Navegar a URLs
+  - `mcp_playwright_browser_snapshot`: Capturar estado de la página (accessibility tree)
+  - `mcp_playwright_browser_click`: Click en elementos (usar `ref` del snapshot)
+  - `mcp_playwright_browser_type`: Escribir texto en campos
+  - `mcp_playwright_browser_file_upload`: Subir archivos
+  - `mcp_playwright_browser_wait_for`: Esperar texto o tiempo
 - **Sistema de archivos**: Lectura/escritura de assets y configuración
 - **Terminal**: Ejecución de comandos y scripts FFmpeg
 - **Scripts compartidos**: Biblioteca reutilizable en `/shared/scripts/`
@@ -663,38 +669,60 @@ Elegir basándose en:
 
 ### Objetivo
 
-Publicar video en YouTube Studio via Playwright.
+Publicar video en YouTube Studio via Playwright MCP.
 
-### Proceso con Playwright
+### Proceso con Playwright MCP
+
+**IMPORTANTE**: Playwright se usa mediante las herramientas MCP `mcp_playwright_*`, NO como librería Python.
+
+#### Flujo de Subida:
 
 ```
 1. NAVEGACIÓN
-   - Ir a studio.youtube.com
-   - Verificar sesión activa
-   - Si no hay sesión → usar credenciales de config
+   mcp_playwright_browser_navigate → "https://studio.youtube.com"
+   mcp_playwright_browser_snapshot → Ver estado de la página
 
-2. SUBIDA
-   - Click en botón "Crear" / "Subir video"
-   - Seleccionar archivo de video
-   - Esperar procesamiento
+2. VERIFICAR SESIÓN
+   - Si aparece login → Autenticar con credenciales
+   - Si ya logueado → Continuar
 
-3. METADATA
-   - Insertar título
-   - Insertar descripción
-   - Añadir tags
-   - Seleccionar categoría
-   - Configurar audiencia (no es para niños)
+3. CREAR VIDEO
+   mcp_playwright_browser_click → Botón "Crear" (ref del snapshot)
+   mcp_playwright_browser_click → "Subir video"
 
-4. THUMBNAIL (si aplica)
-   - Subir miniatura personalizada
+4. SUBIR ARCHIVO
+   mcp_playwright_browser_file_upload → paths: [ruta_absoluta_video]
+   mcp_playwright_browser_wait_for → Esperar procesamiento
 
-5. PROGRAMACIÓN
-   - Si auto_publish = false → Guardar como borrador
-   - Si auto_publish = true → Programar o publicar
+5. COMPLETAR METADATA
+   mcp_playwright_browser_type → Campo título
+   mcp_playwright_browser_type → Campo descripción
+   mcp_playwright_browser_click → "No es para niños"
 
-6. CONFIRMACIÓN
-   - Capturar URL del video
-   - Verificar estado
+6. PUBLICAR/PROGRAMAR
+   mcp_playwright_browser_click → Siguiente → Siguiente → Publicar
+
+7. CONFIRMAR
+   mcp_playwright_browser_snapshot → Capturar URL del video
+```
+
+#### Ejemplo de Uso MCP:
+
+```
+# Paso 1: Navegar
+mcp_playwright_browser_navigate(url="https://studio.youtube.com")
+
+# Paso 2: Capturar snapshot para obtener refs
+mcp_playwright_browser_snapshot()
+
+# Paso 3: Click en elemento usando ref del snapshot
+mcp_playwright_browser_click(ref="button[Create]", element="Botón Crear")
+
+# Paso 4: Subir archivo
+mcp_playwright_browser_file_upload(paths=["/ruta/absoluta/video.mp4"])
+
+# Paso 5: Escribir en campo
+mcp_playwright_browser_type(ref="textbox[Title]", text="Mi título")
 ```
 
 ### Manejo de Errores

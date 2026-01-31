@@ -17,8 +17,16 @@
   "voice": {
     "provider": "edge-tts",
     "voice_id": "es-ES-AlvaroNeural",
-    "speed": "+5%",
-    "pitch": "+0Hz"
+    "speed": "+20%",
+    "pitch": "+5Hz",
+    "style": "energetic"
+  },
+  "audio": {
+    "background_music": true,
+    "music_type": "tension",
+    "music_volume": 0.12,
+    "fade_in": 0.5,
+    "fade_out": 1.5
   },
   "video": {
     "style": "auto",

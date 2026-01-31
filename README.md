@@ -13,13 +13,21 @@ automated-content/
 ├── README.md                    # Este archivo
 ├── config/                      # Configuración global
 │   ├── global.json             # Configuración compartida
-│   └── credentials.env         # Variables de entorno (gitignore)
+│   └── credentials.env         # Credenciales y API keys (gitignore)
 ├── core/                        # Núcleo del sistema
 │   ├── agent-loader.md         # Cómo cargar agentes
 │   └── skill-generator.md      # Sistema de auto-generación de skills
 ├── shared/                      # Recursos compartidos
 │   ├── prompts/                # Prompts reutilizables
-│   └── utils/                  # Utilidades comunes
+│   └── scripts/                # 🆕 Scripts Python compartidos
+│       ├── video/              # Generación de video
+│       │   ├── video_generator.py
+│       │   ├── pexels_client.py
+│       │   └── subtitle_generator.py
+│       ├── audio/              # Generación de audio
+│       │   └── tts_generator.py
+│       └── utils/              # Utilidades
+│           └── ffmpeg_utils.py
 └── youtube/                     # Agente de YouTube
     ├── MASTER-PROMPT.md        # Prompt principal del agente
     ├── config/                 # Configuración del agente
@@ -37,6 +45,34 @@ automated-content/
 | TikTok      | 🔴 Pendiente | Próximamente                     |
 | Blog        | 🔴 Pendiente | Próximamente                     |
 
+## 🆕 APIs Integradas
+
+| API          | Propósito             | Límites           | Estado         |
+| ------------ | --------------------- | ----------------- | -------------- |
+| **Pexels**   | Videos/imágenes stock | 200/hora, 20K/mes | ✅ Configurada |
+| **Edge-TTS** | Síntesis de voz       | Ilimitado         | ✅ Activa      |
+
+## 📦 Scripts Compartidos
+
+Los scripts en `/shared/scripts/` pueden ser usados por cualquier agente:
+
+```python
+# Desde cualquier agente
+import sys
+sys.path.insert(0, '/home/illodev/projects/automated-content')
+
+# Video
+from shared.scripts.video import VideoGenerator, create_short
+from shared.scripts.video import PexelsClient
+from shared.scripts.video import SubtitleGenerator
+
+# Audio
+from shared.scripts.audio import TTSGenerator, generate_narration
+
+# Utilidades
+from shared.scripts.utils import get_duration, get_video_info
+```
+
 ## 🚀 Cómo Usar
 
 ### 1. Configuración Inicial
@@ -45,8 +81,8 @@ automated-content/
 # Copiar configuración de ejemplo
 cp config/credentials.env.example config/credentials.env
 
-# Editar con tus credenciales
-nano config/credentials.env
+# Ver configuración de APIs
+cat config/credentials.env
 ```
 
 ### 2. Activar un Agente

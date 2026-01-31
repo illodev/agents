@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "updated": "2026-01-31",
   "skills": [
     {
@@ -64,6 +64,29 @@
       "usage_count": 0,
       "success_rate": 0,
       "description": "Sistema de manejo y recuperación de errores"
+    },
+    {
+      "name": "generar-video-stock",
+      "category": "media",
+      "file": "media/generar-video-stock.md",
+      "auto_generated": true,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Genera videos con contenido de Pexels (stock)"
+    },
+    {
+      "name": "generar-audio-tts",
+      "category": "media",
+      "file": "media/generar-audio-tts.md",
+      "auto_generated": true,
+      "usage_count": 0,
+      "success_rate": 0,
+      "description": "Genera narración con Edge-TTS"
     }
-  ]
+  ],
+  "shared_scripts": {
+    "video": "/shared/scripts/video/",
+    "audio": "/shared/scripts/audio/",
+    "utils": "/shared/scripts/utils/"
+  }
 }
